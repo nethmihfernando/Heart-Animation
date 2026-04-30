@@ -51,3 +51,15 @@ body.theme-molten input:checked + .toggle-slider {
 body.theme-molten .toggle-slider:before {
   box-shadow: 0 0 8px rgba(255, 150, 50, 0.8);
 }
+
+body.theme-cosmic {
+  background: linear-gradient(180deg, #000000 0%, #050010 50%, #0a001f 100%);
+}
+body.theme-cosmic .glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(147, 112, 219, 0.05) 0%,
+    rgba(75, 0, 130, 0.05) 50%,
+    transparent 65%
+  );
+}
