@@ -25,7 +25,6 @@ body {
 body.theme-molten {
   background: linear-gradient(180deg, #000000 0%, #100500 50%, #1f0a00 100%);
 }
-
 body.theme-molten .glow {
   background: radial-gradient(
     circle at 50% 50%,
@@ -34,7 +33,6 @@ body.theme-molten .glow {
     transparent 65%
   );
 }
-
 body.theme-molten #controls {
   background: rgba(50, 20, 10, 0.3);
   border-color: rgba(255, 120, 50, 0.4);
@@ -43,4 +41,13 @@ body.theme-molten .theme-btn.active,
 body.theme-molten .action-btn.active {
   background: rgba(255, 100, 0, 0.5);
   border-color: rgba(255, 100, 0, 0.7);
+}
+body.theme-molten .toggle-slider {
+  background: rgba(180, 80, 40, 0.4);
+}
+body.theme-molten input:checked + .toggle-slider {
+  background-color: rgba(255, 100, 0, 0.6);
+}
+body.theme-molten .toggle-slider:before {
+  box-shadow: 0 0 8px rgba(255, 150, 50, 0.8);
 }
