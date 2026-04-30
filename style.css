@@ -81,3 +81,15 @@ body.theme-cosmic input:checked + .toggle-slider {
 body.theme-cosmic .toggle-slider:before {
   box-shadow: 0 0 8px rgba(170, 130, 230, 0.8);
 }
+
+body.theme-emerald {
+  background: linear-gradient(180deg, #000000 0%, #001005 50%, #001f0a 100%);
+}
+body.theme-emerald .glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 255, 127, 0.05) 0%,
+    rgba(46, 139, 87, 0.05) 50%,
+    transparent 65%
+  );
+}
