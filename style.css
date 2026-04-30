@@ -20,3 +20,8 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+/* Themes */
+body.theme-molten {
+  background: linear-gradient(180deg, #000000 0%, #100500 50%, #1f0a00 100%);
+}
