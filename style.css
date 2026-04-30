@@ -34,3 +34,13 @@ body.theme-molten .glow {
     transparent 65%
   );
 }
+
+body.theme-molten #controls {
+  background: rgba(50, 20, 10, 0.3);
+  border-color: rgba(255, 120, 50, 0.4);
+}
+body.theme-molten .theme-btn.active,
+body.theme-molten .action-btn.active {
+  background: rgba(255, 100, 0, 0.5);
+  border-color: rgba(255, 100, 0, 0.7);
+}
