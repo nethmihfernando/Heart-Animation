@@ -63,3 +63,12 @@ body.theme-cosmic .glow {
     transparent 65%
   );
 }
+body.theme-cosmic #controls {
+  background: rgba(40, 20, 60, 0.3);
+  border-color: rgba(147, 112, 219, 0.4);
+}
+body.theme-cosmic .theme-btn.active,
+body.theme-cosmic .action-btn.active {
+  background: rgba(147, 112, 219, 0.5);
+  border-color: rgba(147, 112, 219, 0.7);
+}
