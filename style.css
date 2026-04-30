@@ -72,3 +72,12 @@ body.theme-cosmic .action-btn.active {
   background: rgba(147, 112, 219, 0.5);
   border-color: rgba(147, 112, 219, 0.7);
 }
+body.theme-cosmic .toggle-slider {
+  background: rgba(147, 112, 219, 0.4);
+}
+body.theme-cosmic input:checked + .toggle-slider {
+  background-color: rgba(147, 112, 219, 0.6);
+}
+body.theme-cosmic .toggle-slider:before {
+  box-shadow: 0 0 8px rgba(170, 130, 230, 0.8);
+}
