@@ -25,3 +25,12 @@ body {
 body.theme-molten {
   background: linear-gradient(180deg, #000000 0%, #100500 50%, #1f0a00 100%);
 }
+
+body.theme-molten .glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 100, 0, 0.05) 0%,
+    rgba(200, 50, 0, 0.05) 50%,
+    transparent 65%
+  );
+}
