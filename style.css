@@ -156,3 +156,28 @@ body.theme-emerald .toggle-slider:before {
   height: 24px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+.theme-btn,
+.action-btn {
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.theme-btn:hover,
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-btn.active,
+.action-btn.active {
+  color: #fff;
+  font-weight: 500;
+}
