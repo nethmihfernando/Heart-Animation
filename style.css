@@ -111,3 +111,16 @@ body.theme-emerald input:checked + .toggle-slider {
 body.theme-emerald .toggle-slider:before {
   box-shadow: 0 0 8px rgba(100, 200, 150, 0.8);
 }
+
+/* Glow overlay */
+.glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  transition: background 1.5s ease;
+}
