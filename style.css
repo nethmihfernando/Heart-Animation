@@ -194,3 +194,15 @@ body.theme-emerald .toggle-slider:before {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
 }
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
