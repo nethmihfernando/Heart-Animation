@@ -181,3 +181,16 @@ body.theme-emerald .toggle-slider:before {
   color: #fff;
   font-weight: 500;
 }
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-option label[for='animateToggle'] {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
