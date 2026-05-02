@@ -13,3 +13,16 @@ let morphTarget = 0;
 let morphProgress = 0;
 
 const particleCount = 10000;
+
+const themes = {
+  molten: {
+    name: 'Molten',
+    colors: [
+      new THREE.Color(0xff4800),
+      new THREE.Color(0xff8c00),
+      new THREE.Color(0xd73a00),
+      new THREE.Color(0x3d1005),
+      new THREE.Color(0xffc600)
+    ],
+    bloom: { strength: 0.35, radius: 0.45, threshold: 0.7 }
+  },
