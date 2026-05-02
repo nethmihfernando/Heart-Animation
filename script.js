@@ -26,3 +26,13 @@ const themes = {
     ],
     bloom: { strength: 0.35, radius: 0.45, threshold: 0.7 }
   },
+  cosmic: {
+    name: 'Cosmic',
+    colors: [
+      new THREE.Color(0x6a0dad),
+      new THREE.Color(0x9370db),
+      new THREE.Color(0x4b0082),
+      new THREE.Color(0x8a2be2),
+      new THREE.Color(0xdda0dd)
+    ],
+    bloom: { strength: 0.4, radius: 0.5, threshold: 0.65 }
