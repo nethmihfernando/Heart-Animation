@@ -49,3 +49,5 @@ const themes = {
     bloom: { strength: 0.3, radius: 0.6, threshold: 0.75 }
   }
 };
+
+document.addEventListener('DOMContentLoaded', init);
