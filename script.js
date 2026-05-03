@@ -51,3 +51,10 @@ const themes = {
 };
 
 document.addEventListener('DOMContentLoaded', init);
+
+function createStarPath(particleIndex, totalParticles) {
+  const numStarPoints = 5;
+  const outerRadius = 35;
+  const innerRadius = 15;
+  const scale = 1.0;
+  const zDepth = 4;
