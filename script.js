@@ -58,3 +58,11 @@ function createStarPath(particleIndex, totalParticles) {
   const innerRadius = 15;
   const scale = 1.0;
   const zDepth = 4;
+  
+  const starVertices = [];
+  for (let i = 0; i < numStarPoints; i++) {
+    let angle = (i / numStarPoints) * Math.PI * 2 - Math.PI / 2;
+    starVertices.push(new THREE.Vector2(outerRadius * Math.cos(angle), outerRadius * Math.sin(angle)));
+    angle += Math.PI / numStarPoints;
+    starVertices.push(new THREE.Vector2(innerRadius * Math.cos(angle), innerRadius * Math.sin(angle)));
+  }
