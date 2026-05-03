@@ -66,3 +66,15 @@ function createStarPath(particleIndex, totalParticles) {
     angle += Math.PI / numStarPoints;
     starVertices.push(new THREE.Vector2(innerRadius * Math.cos(angle), innerRadius * Math.sin(angle)));
   }
+
+  const numSegments = starVertices.length;
+  const t_path = (particleIndex / totalParticles) * numSegments;
+  const segmentIndex = Math.floor(t_path) % numSegments;
+  const segmentProgress = t_path - Math.floor(t_path);
+
+  const startVertex = starVertices[segmentIndex];
+  const endVertex = starVertices[(segmentIndex + 1) % numSegments];
+
+  const x = THREE.MathUtils.lerp(startVertex.x, endVertex.x, segmentProgress);
+  const y = THREE.MathUtils.lerp(startVertex.y, endVertex.y, segmentProgress);
+  const z = Math.sin((particleIndex / totalParticles) * Math.PI * 4) * (zDepth / 2);
