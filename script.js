@@ -36,3 +36,16 @@ const themes = {
       new THREE.Color(0xdda0dd)
     ],
     bloom: { strength: 0.4, radius: 0.5, threshold: 0.65 }
+  },
+  emerald: {
+    name: 'Emerald',
+    colors: [
+      new THREE.Color(0x00ff7f),
+      new THREE.Color(0x3cb371),
+      new THREE.Color(0x2e8b57),
+      new THREE.Color(0x00fa9a),
+      new THREE.Color(0x98fb98)
+    ],
+    bloom: { strength: 0.3, radius: 0.6, threshold: 0.75 }
+  }
+};
