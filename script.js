@@ -78,3 +78,11 @@ function createStarPath(particleIndex, totalParticles) {
   const x = THREE.MathUtils.lerp(startVertex.x, endVertex.x, segmentProgress);
   const y = THREE.MathUtils.lerp(startVertex.y, endVertex.y, segmentProgress);
   const z = Math.sin((particleIndex / totalParticles) * Math.PI * 4) * (zDepth / 2);
+
+  const jitterStrength = 0.2;
+  return new THREE.Vector3(
+    x * scale + (Math.random() - 0.5) * jitterStrength,
+    y * scale + (Math.random() - 0.5) * jitterStrength,
+    z + (Math.random() - 0.5) * jitterStrength * 0.5
+  );
+}
