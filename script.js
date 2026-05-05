@@ -98,3 +98,11 @@ function createHeartPath(particleIndex, totalParticles) {
   const finalX = x * scale;
   const finalY = y * scale;
   const z = Math.sin(t * 4) * 2;
+
+  const jitterStrength = 0.2;
+  return new THREE.Vector3(
+    finalX + (Math.random() - 0.5) * jitterStrength,
+    finalY + (Math.random() - 0.5) * jitterStrength,
+    z + (Math.random() - 0.5) * jitterStrength * 0.5
+  );
+}
