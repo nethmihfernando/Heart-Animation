@@ -86,3 +86,7 @@ function createStarPath(particleIndex, totalParticles) {
     z + (Math.random() - 0.5) * jitterStrength * 0.5
   );
 }
+
+function createHeartPath(particleIndex, totalParticles) {
+  const t = (particleIndex / totalParticles) * Math.PI * 2;
+  const scale = 2.2;
