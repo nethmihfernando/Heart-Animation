@@ -117,3 +117,15 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   document.getElementById('container').appendChild(renderer.domElement);
+
+  createUI();
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.04;
+  controls.rotateSpeed = 0.3;
+  controls.minDistance = 30;
+  controls.maxDistance = 300;
+  controls.enablePan = false;
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = 0.15;
