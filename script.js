@@ -136,3 +136,5 @@ function init() {
   composer.addPass(bloomPass);
   composer.addPass(new OutputPass());
   scene.userData.bloomPass = bloomPass;
+
+  createParticleSystem();
