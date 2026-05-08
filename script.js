@@ -144,3 +144,7 @@ function init() {
   setTheme(currentTheme);
   animate();
 }
+
+function createUI() {
+  const controlsDiv = document.getElementById('controls');
+  controlsDiv.innerHTML = '';
