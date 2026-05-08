@@ -138,3 +138,9 @@ function init() {
   scene.userData.bloomPass = bloomPass;
 
   createParticleSystem();
+
+  window.addEventListener('resize', onWindowResize);
+
+  setTheme(currentTheme);
+  animate();
+}
