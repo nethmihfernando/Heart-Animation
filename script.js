@@ -129,3 +129,10 @@ function init() {
   controls.enablePan = false;
   controls.autoRotate = false;
   controls.autoRotateSpeed = 0.15;
+
+  composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+  const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+  composer.addPass(bloomPass);
+  composer.addPass(new OutputPass());
+  scene.userData.bloomPass = bloomPass;
