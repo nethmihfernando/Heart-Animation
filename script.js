@@ -167,3 +167,13 @@ function createUI() {
 
   const actionSelector = document.createElement('div');
   actionSelector.id = 'action-selector';
+
+  const morphBtn = document.createElement('button');
+  morphBtn.className = 'action-btn';
+  morphBtn.textContent = 'Morph';
+  morphBtn.addEventListener('click', () => {
+    morphBtn.classList.toggle('active');
+    morphTarget = morphTarget === 0 ? 1 : 0;
+  });
+  actionSelector.appendChild(morphBtn);
+  controlsDiv.appendChild(actionSelector);
