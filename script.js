@@ -181,3 +181,9 @@ function createUI() {
   const separator2 = document.createElement('div');
   separator2.className = 'separator';
   controlsDiv.appendChild(separator2);
+
+  const toggleOption = document.createElement('div');
+  toggleOption.className = 'toggle-option';
+
+  const toggleLabel = document.createElement('label');
+  toggleLabel.className = 'toggle-switch';
