@@ -148,3 +148,15 @@ function init() {
 function createUI() {
   const controlsDiv = document.getElementById('controls');
   controlsDiv.innerHTML = '';
+
+  const themeSelector = document.createElement('div');
+  themeSelector.id = 'theme-selector';
+  Object.keys(themes).forEach((themeKey) => {
+    const button = document.createElement('button');
+    button.className = 'theme-btn';
+    button.dataset.theme = themeKey;
+    button.textContent = themes[themeKey].name;
+    button.addEventListener('click', () => setTheme(themeKey));
+    themeSelector.appendChild(button);
+  });
+  controlsDiv.appendChild(themeSelector);
