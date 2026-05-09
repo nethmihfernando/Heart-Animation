@@ -177,3 +177,7 @@ function createUI() {
   });
   actionSelector.appendChild(morphBtn);
   controlsDiv.appendChild(actionSelector);
+
+  const separator2 = document.createElement('div');
+  separator2.className = 'separator';
+  controlsDiv.appendChild(separator2);
