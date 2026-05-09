@@ -160,3 +160,7 @@ function createUI() {
     themeSelector.appendChild(button);
   });
   controlsDiv.appendChild(themeSelector);
+
+  const separator1 = document.createElement('div');
+  separator1.className = 'separator';
+  controlsDiv.appendChild(separator1);
