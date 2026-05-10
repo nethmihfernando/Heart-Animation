@@ -261,3 +261,15 @@ function createParticleSystem() {
   geometry.setAttribute('starPosition', new THREE.BufferAttribute(starPositions, 3));
   geometry.setAttribute('heartPosition', new THREE.BufferAttribute(heartPositions, 3));
   geometry.setAttribute('disintegrationOffset', new THREE.BufferAttribute(disintegrationOffsets, 3));
+
+  const texture = createParticleTexture();
+  const material = new THREE.PointsMaterial({
+    size: 2.8,
+    map: texture,
+    vertexColors: true,
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    sizeAttenuation: true,
+    alphaTest: 0.01
+  });
