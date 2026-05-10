@@ -273,3 +273,7 @@ function createParticleSystem() {
     sizeAttenuation: true,
     alphaTest: 0.01
   });
+
+  particles = new THREE.Points(geometry, material);
+  scene.add(particles);
+}
