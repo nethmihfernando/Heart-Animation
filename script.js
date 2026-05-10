@@ -205,3 +205,8 @@ function createUI() {
   const labelForToggle = document.createElement('label');
   labelForToggle.htmlFor = 'animateToggle';
   labelForToggle.textContent = 'Animate';
+
+  toggleOption.appendChild(toggleLabel);
+  toggleOption.appendChild(labelForToggle);
+  controlsDiv.appendChild(toggleOption);
+}
