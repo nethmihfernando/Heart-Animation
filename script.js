@@ -239,3 +239,18 @@ function createParticleSystem() {
     heartPositions[i3] = heartPos.x;
     heartPositions[i3 + 1] = heartPos.y;
     heartPositions[i3 + 2] = heartPos.z;
+
+    const { color, size } = getAttributesForParticle(i);
+    colors[i3] = color.r;
+    colors[i3 + 1] = color.g;
+    colors[i3 + 2] = color.b;
+    sizes[i] = size;
+
+    const offsetStrength = 30 + Math.random() * 40;
+    const phi = Math.random() * Math.PI * 2;
+    const theta = Math.acos(2 * Math.random() - 1);
+
+    disintegrationOffsets[i3] = Math.sin(theta) * Math.cos(phi) * offsetStrength;
+    disintegrationOffsets[i3 + 1] = Math.sin(theta) * Math.sin(phi) * offsetStrength;
+    disintegrationOffsets[i3 + 2] = Math.cos(theta) * offsetStrength * 0.5;
+  }
