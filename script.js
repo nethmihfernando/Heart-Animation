@@ -195,3 +195,13 @@ function createUI() {
   toggleInput.addEventListener('change', (e) => {
     isAnimationEnabled = e.target.checked;
   });
+
+  const toggleSlider = document.createElement('span');
+  toggleSlider.className = 'toggle-slider';
+
+  toggleLabel.appendChild(toggleInput);
+  toggleLabel.appendChild(toggleSlider);
+
+  const labelForToggle = document.createElement('label');
+  labelForToggle.htmlFor = 'animateToggle';
+  labelForToggle.textContent = 'Animate';
