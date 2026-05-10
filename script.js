@@ -221,3 +221,21 @@ function createParticleSystem() {
   const starPositions = new Float32Array(particleCount * 3);
   const heartPositions = new Float32Array(particleCount * 3);
   const disintegrationOffsets = new Float32Array(particleCount * 3);
+
+  for (let i = 0; i < particleCount; i++) {
+    const i3 = i * 3;
+
+    const starPos = createStarPath(i, particleCount);
+    const heartPos = createHeartPath(i, particleCount);
+
+    positions[i3] = starPos.x;
+    positions[i3 + 1] = starPos.y;
+    positions[i3 + 2] = starPos.z;
+
+    starPositions[i3] = starPos.x;
+    starPositions[i3 + 1] = starPos.y;
+    starPositions[i3 + 2] = starPos.z;
+
+    heartPositions[i3] = heartPos.x;
+    heartPositions[i3 + 1] = heartPos.y;
+    heartPositions[i3 + 2] = heartPos.z;
