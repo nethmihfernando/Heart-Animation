@@ -187,3 +187,11 @@ function createUI() {
 
   const toggleLabel = document.createElement('label');
   toggleLabel.className = 'toggle-switch';
+
+  const toggleInput = document.createElement('input');
+  toggleInput.type = 'checkbox';
+  toggleInput.id = 'animateToggle';
+  toggleInput.checked = true;
+  toggleInput.addEventListener('change', (e) => {
+    isAnimationEnabled = e.target.checked;
+  });
