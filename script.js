@@ -210,3 +210,14 @@ function createUI() {
   toggleOption.appendChild(labelForToggle);
   controlsDiv.appendChild(toggleOption);
 }
+
+function createParticleSystem() {
+  const geometry = new THREE.BufferGeometry();
+
+  const positions = new Float32Array(particleCount * 3);
+  const colors = new Float32Array(particleCount * 3);
+  const sizes = new Float32Array(particleCount);
+
+  const starPositions = new Float32Array(particleCount * 3);
+  const heartPositions = new Float32Array(particleCount * 3);
+  const disintegrationOffsets = new Float32Array(particleCount * 3);
