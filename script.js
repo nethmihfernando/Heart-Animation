@@ -254,3 +254,10 @@ function createParticleSystem() {
     disintegrationOffsets[i3 + 1] = Math.sin(theta) * Math.sin(phi) * offsetStrength;
     disintegrationOffsets[i3 + 2] = Math.cos(theta) * offsetStrength * 0.5;
   }
+
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+  geometry.setAttribute('starPosition', new THREE.BufferAttribute(starPositions, 3));
+  geometry.setAttribute('heartPosition', new THREE.BufferAttribute(heartPositions, 3));
+  geometry.setAttribute('disintegrationOffset', new THREE.BufferAttribute(disintegrationOffsets, 3));
