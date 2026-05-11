@@ -286,3 +286,13 @@ function getAttributesForParticle(i) {
   const colorIndex1 = Math.floor(colorProgress);
   const colorIndex2 = (colorIndex1 + 1) % colorPalette.length;
   const blendFactor = colorProgress - colorIndex1;
+
+  const color1 = colorPalette[colorIndex1];
+  const color2 = colorPalette[colorIndex2];
+  const baseColor = new THREE.Color().lerpColors(color1, color2, blendFactor);
+
+  const color = baseColor.clone().multiplyScalar(0.65 + Math.random() * 0.55);
+  const size = 0.65 + Math.random() * 0.6;
+
+  return { color, size };
+}
