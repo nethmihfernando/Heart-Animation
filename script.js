@@ -277,3 +277,12 @@ function createParticleSystem() {
   particles = new THREE.Points(geometry, material);
   scene.add(particles);
 }
+
+function getAttributesForParticle(i) {
+  const t = i / particleCount;
+  const colorPalette = themes[currentTheme].colors;
+
+  const colorProgress = (t * colorPalette.length * 1.5 + time * 0.05) % colorPalette.length;
+  const colorIndex1 = Math.floor(colorProgress);
+  const colorIndex2 = (colorIndex1 + 1) % colorPalette.length;
+  const blendFactor = colorProgress - colorIndex1;
