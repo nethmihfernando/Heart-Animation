@@ -303,3 +303,9 @@ function createParticleTexture() {
   canvas.width = size;
   canvas.height = size;
   const context = canvas.getContext('2d');
+
+  const centerX = size / 2;
+  const centerY = size / 2;
+  const outerRadius = size * 0.45;
+  const innerRadius = size * 0.2;
+  const numPoints = 5;
