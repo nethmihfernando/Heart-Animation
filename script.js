@@ -296,3 +296,10 @@ function getAttributesForParticle(i) {
 
   return { color, size };
 }
+
+function createParticleTexture() {
+  const canvas = document.createElement('canvas');
+  const size = 64;
+  canvas.width = size;
+  canvas.height = size;
+  const context = canvas.getContext('2d');
