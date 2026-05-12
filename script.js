@@ -325,3 +325,11 @@ function createParticleTexture() {
   gradient.addColorStop(0.3, 'rgba(255, 255, 220, 0.9)');
   gradient.addColorStop(0.6, 'rgba(255, 200, 150, 0.6)');
   gradient.addColorStop(1, 'rgba(255, 150, 0, 0)');
+
+  context.fillStyle = gradient;
+  context.fill();
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.needsUpdate = true;
+  return texture;
+}
