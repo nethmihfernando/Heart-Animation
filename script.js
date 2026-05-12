@@ -319,3 +319,9 @@ function createParticleTexture() {
     context.lineTo(centerX + innerRadius * Math.cos(innerAngle), centerY + innerRadius * Math.sin(innerAngle));
   }
   context.closePath();
+
+  const gradient = context.createRadialGradient(centerX, centerY, 0, centerX, centerY, outerRadius);
+  gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+  gradient.addColorStop(0.3, 'rgba(255, 255, 220, 0.9)');
+  gradient.addColorStop(0.6, 'rgba(255, 200, 150, 0.6)');
+  gradient.addColorStop(1, 'rgba(255, 150, 0, 0)');
