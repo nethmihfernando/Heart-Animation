@@ -309,3 +309,13 @@ function createParticleTexture() {
   const outerRadius = size * 0.45;
   const innerRadius = size * 0.2;
   const numPoints = 5;
+
+  context.beginPath();
+  context.moveTo(centerX, centerY - outerRadius);
+  for (let i = 0; i < numPoints; i++) {
+    const outerAngle = (i / numPoints) * Math.PI * 2 - Math.PI / 2;
+    context.lineTo(centerX + outerRadius * Math.cos(outerAngle), centerY + outerRadius * Math.sin(outerAngle));
+    const innerAngle = outerAngle + Math.PI / numPoints;
+    context.lineTo(centerX + innerRadius * Math.cos(innerAngle), centerY + innerRadius * Math.sin(innerAngle));
+  }
+  context.closePath();
