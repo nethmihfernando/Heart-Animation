@@ -333,3 +333,15 @@ function createParticleTexture() {
   texture.needsUpdate = true;
   return texture;
 }
+
+function animateParticles() {
+  if (!particles || !isAnimationEnabled) return;
+
+  const positions = particles.geometry.attributes.position.array;
+  const starPositions = particles.geometry.attributes.starPosition.array;
+  const heartPositions = particles.geometry.attributes.heartPosition.array;
+  const particleColors = particles.geometry.attributes.color.array;
+  const particleSizes = particles.geometry.attributes.size.array;
+  const disintegrationOffsets = particles.geometry.attributes.disintegrationOffset.array;
+
+  morphProgress += (morphTarget - morphProgress) * 0.04;
