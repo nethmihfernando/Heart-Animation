@@ -357,3 +357,9 @@ function animateParticles() {
     const disintegrationCycleTime = 20.0;
     const particleCycleOffset = (i / particleCount) * disintegrationCycleTime * 0.5;
     const cycleProgress = ((time * 0.6 + particleCycleOffset) % disintegrationCycleTime) / disintegrationCycleTime;
+
+    let disintegrationAmount = 0;
+    const stablePhaseEnd = 0.5;
+    const disintegrateStartPhase = stablePhaseEnd;
+    const disintegrateFullPhase = stablePhaseEnd + 0.15;
+    const holdPhaseEnd = disintegrateFullPhase + 0.1;
