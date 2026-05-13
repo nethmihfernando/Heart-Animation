@@ -345,3 +345,15 @@ function animateParticles() {
   const disintegrationOffsets = particles.geometry.attributes.disintegrationOffset.array;
 
   morphProgress += (morphTarget - morphProgress) * 0.04;
+
+  for (let i = 0; i < particleCount; i++) {
+    const i3 = i * 3;
+    const iSize = i;
+
+    const homeX = THREE.MathUtils.lerp(starPositions[i3], heartPositions[i3], morphProgress);
+    const homeY = THREE.MathUtils.lerp(starPositions[i3 + 1], heartPositions[i3 + 1], morphProgress);
+    const homeZ = THREE.MathUtils.lerp(starPositions[i3 + 2], heartPositions[i3 + 2], morphProgress);
+
+    const disintegrationCycleTime = 20.0;
+    const particleCycleOffset = (i / particleCount) * disintegrationCycleTime * 0.5;
+    const cycleProgress = ((time * 0.6 + particleCycleOffset) % disintegrationCycleTime) / disintegrationCycleTime;
