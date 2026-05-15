@@ -363,3 +363,15 @@ function animateParticles() {
     const disintegrateStartPhase = stablePhaseEnd;
     const disintegrateFullPhase = stablePhaseEnd + 0.15;
     const holdPhaseEnd = disintegrateFullPhase + 0.1;
+
+    if (cycleProgress < stablePhaseEnd) {
+      disintegrationAmount = 0;
+    } else if (cycleProgress < disintegrateFullPhase) {
+      disintegrationAmount = (cycleProgress - disintegrateStartPhase) / (disintegrateFullPhase - disintegrateStartPhase);
+    } else if (cycleProgress < holdPhaseEnd) {
+      disintegrationAmount = 1.0;
+    } else {
+      disintegrationAmount = 1.0 - (cycleProgress - holdPhaseEnd) / (1.0 - holdPhaseEnd);
+    }
+
+    disintegrationAmount = Math.sin(disintegrationAmount * Math.PI * 0.5);
