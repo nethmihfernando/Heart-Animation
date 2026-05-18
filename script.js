@@ -387,3 +387,13 @@ function animateParticles() {
       currentTargetZ = homeZ + disintegrationOffsets[i3 + 2] * disintegrationAmount;
       currentLerpFactor = 0.045 + disintegrationAmount * 0.02;
     }
+
+    positions[i3] += (currentTargetX - positions[i3]) * currentLerpFactor;
+    positions[i3 + 1] += (currentTargetY - positions[i3 + 1]) * currentLerpFactor;
+    positions[i3 + 2] += (currentTargetZ - positions[i3 + 2]) * currentLerpFactor;
+
+    const { color: baseParticleColor, size: baseParticleSize } = getAttributesForParticle(i);
+
+    let brightnessFactor =
+      (0.65 + Math.sin((i / particleCount) * Math.PI * 7 + time * 1.3) * 0.35) * (1 - disintegrationAmount * 0.75);
+    brightnessFactor *= 0.85 + Math.sin(time * 7 + i * 0.5) * 0.15;
