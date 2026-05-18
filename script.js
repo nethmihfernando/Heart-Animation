@@ -406,3 +406,8 @@ function animateParticles() {
     currentSize *= 0.8 + Math.sin(time * 5 + i * 0.3) * 0.2;
     particleSizes[iSize] = Math.max(0.05, currentSize);
   }
+
+  particles.geometry.attributes.position.needsUpdate = true;
+  particles.geometry.attributes.color.needsUpdate = true;
+  particles.geometry.attributes.size.needsUpdate = true;
+}
