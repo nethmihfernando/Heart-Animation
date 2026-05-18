@@ -397,3 +397,12 @@ function animateParticles() {
     let brightnessFactor =
       (0.65 + Math.sin((i / particleCount) * Math.PI * 7 + time * 1.3) * 0.35) * (1 - disintegrationAmount * 0.75);
     brightnessFactor *= 0.85 + Math.sin(time * 7 + i * 0.5) * 0.15;
+
+    particleColors[i3] = baseParticleColor.r * brightnessFactor;
+    particleColors[i3 + 1] = baseParticleColor.g * brightnessFactor;
+    particleColors[i3 + 2] = baseParticleColor.b * brightnessFactor;
+
+    let currentSize = baseParticleSize * (1 - disintegrationAmount * 0.9);
+    currentSize *= 0.8 + Math.sin(time * 5 + i * 0.3) * 0.2;
+    particleSizes[iSize] = Math.max(0.05, currentSize);
+  }
