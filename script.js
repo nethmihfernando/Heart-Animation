@@ -375,3 +375,15 @@ function animateParticles() {
     }
 
     disintegrationAmount = Math.sin(disintegrationAmount * Math.PI * 0.5);
+
+    let currentTargetX = homeX;
+    let currentTargetY = homeY;
+    let currentTargetZ = homeZ;
+    let currentLerpFactor = 0.085;
+
+    if (disintegrationAmount > 0.001) {
+      currentTargetX = homeX + disintegrationOffsets[i3] * disintegrationAmount;
+      currentTargetY = homeY + disintegrationOffsets[i3 + 1] * disintegrationAmount;
+      currentTargetZ = homeZ + disintegrationOffsets[i3 + 2] * disintegrationAmount;
+      currentLerpFactor = 0.045 + disintegrationAmount * 0.02;
+    }
