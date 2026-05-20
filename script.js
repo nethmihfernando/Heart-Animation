@@ -411,3 +411,10 @@ function animateParticles() {
   particles.geometry.attributes.color.needsUpdate = true;
   particles.geometry.attributes.size.needsUpdate = true;
 }
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  composer.setSize(window.innerWidth, window.innerHeight);
+}
