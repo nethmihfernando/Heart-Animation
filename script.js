@@ -418,3 +418,12 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   composer.setSize(window.innerWidth, window.innerHeight);
 }
+
+function setTheme(themeName) {
+  if (!themes[themeName]) return;
+  currentTheme = themeName;
+
+  document.body.className = `theme-${currentTheme}`;
+  document.querySelectorAll('.theme-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.theme === themeName);
+  });
