@@ -435,3 +435,6 @@ function setTheme(themeName) {
     bloomPass.radius = theme.bloom.radius;
     bloomPass.threshold = theme.bloom.threshold;
   }
+
+  updateParticleColorsAndSizes();
+}
