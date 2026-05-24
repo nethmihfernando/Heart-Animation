@@ -444,3 +444,11 @@ function updateParticleColorsAndSizes() {
 
   const pColors = particles.geometry.attributes.color.array;
   const pSizes = particles.geometry.attributes.size.array;
+
+  for (let i = 0; i < particleCount; i++) {
+    const { color, size } = getAttributesForParticle(i);
+    pColors[i * 3] = color.r;
+    pColors[i * 3 + 1] = color.g;
+    pColors[i * 3 + 2] = color.b;
+    pSizes[i] = size;
+  }
