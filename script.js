@@ -456,3 +456,8 @@ function updateParticleColorsAndSizes() {
   particles.geometry.attributes.color.needsUpdate = true;
   particles.geometry.attributes.size.needsUpdate = true;
 }
+
+function animate() {
+  requestAnimationFrame(animate);
+  time += 0.02;
+  controls.update();
