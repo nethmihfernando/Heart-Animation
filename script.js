@@ -438,3 +438,9 @@ function setTheme(themeName) {
 
   updateParticleColorsAndSizes();
 }
+
+function updateParticleColorsAndSizes() {
+  if (!particles) return;
+
+  const pColors = particles.geometry.attributes.color.array;
+  const pSizes = particles.geometry.attributes.size.array;
