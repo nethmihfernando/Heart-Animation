@@ -427,3 +427,11 @@ function setTheme(themeName) {
   document.querySelectorAll('.theme-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.theme === themeName);
   });
+
+  const theme = themes[currentTheme];
+  const bloomPass = scene.userData.bloomPass;
+  if (bloomPass) {
+    bloomPass.strength = theme.bloom.strength;
+    bloomPass.radius = theme.bloom.radius;
+    bloomPass.threshold = theme.bloom.threshold;
+  }
