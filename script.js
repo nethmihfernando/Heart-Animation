@@ -452,3 +452,7 @@ function updateParticleColorsAndSizes() {
     pColors[i * 3 + 2] = color.b;
     pSizes[i] = size;
   }
+
+  particles.geometry.attributes.color.needsUpdate = true;
+  particles.geometry.attributes.size.needsUpdate = true;
+}
