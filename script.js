@@ -461,3 +461,10 @@ function animate() {
   requestAnimationFrame(animate);
   time += 0.02;
   controls.update();
+
+  if (isAnimationEnabled) {
+    animateParticles();
+  }
+
+  composer.render();
+}
