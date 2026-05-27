@@ -24,3 +24,14 @@ A visually stunning, interactive 3D particle simulation built with Three.js. Thi
 * **Three.js (r162):** Core 3D engine handling `BufferGeometry`, custom canvas particle textures, and additive blending modes for the ultimate brightness effect.
 
 ---
+
+## 📖 How It Works Under the Hood
+
+### Parametric Formulas
+
+The particle layout structures are calculated purely with mathematics:
+
+* **Heart Shape:** Driven by the classic parametric 2D heart formula scaled dynamically across the Z-axis:
+    $$x = 16 \cdot \sin^3(t)$$
+    $$y = 13 \cdot \cos(t) - 5 \cdot \cos(2t) - 2 \cdot \cos(3t) - \cos(4t)$$
+* **Star Shape:** Alternates polar coordinates sequentially between an inner and outer radius across 5 distinct points to map clean vector lines.
