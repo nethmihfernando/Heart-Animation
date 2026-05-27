@@ -18,3 +18,10 @@ Real-Time Theming: Switch instantly between three beautifully curated neon color
 Cinematic Post-Processing: Powered by Three.js EffectComposer and UnrealBloomPass to generate an authentic neon glow effect.
 
 Interactive Controls: Built-in OrbitControls allowing users to rotate, pan, and zoom around the system, alongside a sleek frosted-glass control UI panel.
+
+🛠️ Tech Stack
+HTML5 & CSS3: Semantics and a modern UI featuring glassmorphism backdrop blurs.
+
+JavaScript (ES6+): Modular structures using native import maps.
+
+Three.js (r162): Core 3D engine handling BufferGeometry, custom canvas particle textures, and additive blending modes for the ultimate brightness effect.
