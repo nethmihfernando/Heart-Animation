@@ -35,3 +35,9 @@ The particle layout structures are calculated purely with mathematics:
     $$x = 16 \cdot \sin^3(t)$$
     $$y = 13 \cdot \cos(t) - 5 \cdot \cos(2t) - 2 \cdot \cos(3t) - \cos(4t)$$
 * **Star Shape:** Alternates polar coordinates sequentially between an inner and outer radius across 5 distinct points to map clean vector lines.
+
+### Disintegration Mechanics
+
+Every single particle is assigned a random spherical offset vector upon initialization. During the animation loop, a sinusoidal timeline calculates the displacement based on a cyclic window, pushing the particle away from its "home" coordinate and bringing it smoothly back.
+
+---
