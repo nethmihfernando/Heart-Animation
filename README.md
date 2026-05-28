@@ -41,3 +41,10 @@ The particle layout structures are calculated purely with mathematics:
 Every single particle is assigned a random spherical offset vector upon initialization. During the animation loop, a sinusoidal timeline calculates the displacement based on a cyclic window, pushing the particle away from its "home" coordinate and bringing it smoothly back.
 
 ---
+
+## 📂 Project Structure
+
+├── index.html     # HTML structure and library import map setup
+├── style.css      # Core theme variations and responsive UI layouts
+├── script.js     # Three.js engine, particle logic, and animation lifecycle
+└── README.md      # Repository documentation
